@@ -23,11 +23,10 @@ dist-ssr
 *.sln
 *.sw?
 
-# Local configuration and test output
+# Local configuration
 .env
 .env.*
-!.env.example
-coverage
-playwright-report
-test-results
 *.tsbuildinfo
+
+# Prisma Client dihasilkan oleh prisma generate
+backend/src/generated/

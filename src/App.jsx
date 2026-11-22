@@ -97,7 +97,7 @@ function App() {
       <main id="dashboard">
         <h2>Dashboard Trading</h2>
         <p>Selamat datang di PeTrade Journey.</p>
-        <p className="storage-note">Jurnal tersimpan sementara di backend selama server berjalan.</p>
+        <p className="storage-note">Jurnal tersimpan di database dan tetap tersedia setelah server dimulai ulang.</p>
         {loading && <p role="status">Memuat data trading...</p>}
         {error && (
           <div className="feedback feedback-error" role="alert">

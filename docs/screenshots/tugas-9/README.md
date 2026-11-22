@@ -1,15 +1,6 @@
-# Screenshot Tugas 9 — PeTrade Journey
+# Arsip Screenshot Tugas 9 - PeTrade Journey
 
-Bukti diambil otomatis dari Microsoft Edge melalui Playwright. Screenshot kode sumber 01-05 membaca berkas asli menggunakan Vite raw imports. Screenshot 06-15 berasal dari REST client browser lokal yang benar-benar mengirim HTTP ke backend NestJS. Screenshot 16-28 berasal dari frontend React. Request untuk ekstensi REST Client VS Code tersedia di [docs/trades.http](../../trades.http).
-
-Untuk mengambil ulang dari folder utama:
-
-```powershell
-npm.cmd run build:api
-npm.cmd run test:ui
-```
-
-Pengujian menggunakan backend port 3002 dan Vite port 5174 supaya terpisah dari server development biasa. API market eksternal dimatikan secara terkontrol selama pengujian UI. Skenario 27-28 sengaja memutus request lokal untuk menguji error handling dan percobaan ulang. Tidak ada response palsu untuk skenario CRUD yang sukses.
+Folder ini menyimpan bukti pengerjaan Tugas 9 sebelum penyimpanan array diganti PostgreSQL. Panduan aktif dan screenshot Tugas 10 tersedia pada [README utama](../../../README.md).
 
 | Berkas | Tahap / bukti |
 | --- | --- |

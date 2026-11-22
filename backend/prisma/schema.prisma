@@ -1,0 +1,37 @@
+generator client {
+  provider     = "prisma-client"
+  output       = "../src/generated/prisma"
+  moduleFormat = "cjs"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Posisi {
+  Buy
+  Sell
+}
+
+enum HasilTrade {
+  Win
+  Loss
+  BreakEven @map("Break Even")
+}
+
+model Trade {
+  id            String     @id @default(uuid())
+  tanggal       DateTime   @db.Date
+  pair          String     @db.VarChar(20)
+  posisi        Posisi
+  lotSize       Decimal    @db.Decimal(18, 2)
+  hasil         HasilTrade
+  profitLoss    Decimal    @db.Decimal(18, 2)
+  catatan       String     @default("") @db.VarChar(2000)
+  sesuaiRencana Boolean    @default(false)
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+
+  @@index([tanggal, createdAt])
+  @@map("trades")
+}
